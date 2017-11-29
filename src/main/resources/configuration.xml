@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property>
+		<name>process-id</name>
+		<value>RPT_EUROPEAN-LEAGUES-DATE-GOALS</value>
+	</property>
+	
+	<property>
+        <name>mapreduce.job.name</name>
+        <value>RPT_EUROPEAN-LEAGUES-DATE-GOALS</value>
+        <description>The same as project name</description>
+    </property>
+	
+	<property>
+		<name>mapreduce.job.reduces</name>
+		<value>20</value>
+		<description>NUMBER OF REDUCERS</description>
+	</property>	
+	<property>
+		<name>mapreduce.reduce.speculative</name>
+		<value>false</value>
+		<description>SPECULATIVE FOR REDUCING</description>
+	</property>
+	<property>
+		<name>mapreduce.job.queuename</name>
+		<value>medium_relatorios</value>
+		<description></description>
+	</property>
+	
+	<property>
+		<name>bpl-input-path</name>
+		<value>/hive/gphd/warehouse/fact.db/dw_f_bpl/</value>
+		<description>BARCLAYS PREMIER LEAGUE INPUT PATH</description>
+	</property>
+	
+    <property>
+		<name>bundesliga-input-path</name>
+		<value>/hive/gphd/warehouse/fact.db/dw_f_bundesliga/</value>
+		<description>BUNDESLIGA INPUT PATH</description>
+	</property>
+	
+	<property>
+		<name>la-liga-input-path</name>
+		<value>/hive/gphd/warehouse/fact.db/dw_f_la_liga/</value>
+		<description>LA LIGAINPUT PATH</description>
+	</property>
+	
+	<property>
+		<name>league-one-input-path</name>
+		<value>/hive/gphd/warehouse/fact.db/dw_f_league_one/</value>
+		<description>LEAGUE ONE INPUT PATH</description>
+	</property>
+	
+	<property>
+		<name>serie-a-tim-input-path</name>
+		<value>/hive/gphd/warehouse/fact.db/dw_f_serie_a_tim/</value>
+		<description>SERIE A TIM INPUT PATH</description>
+	</property>
+	
+   	<property>
+		<name>partition-key</name>
+		<value>cdrdate</value>
+		<description>Chave de particionamento da tabela European League</description>
+	</property>
+	
+	 <property>
+        <name>report-output-path</name>
+        <value>${environment}/cdr/reports/euro_leagues/output/</value>
+        <description>REPORT OUTPUT PATH</description>
+    </property>
+	
+    <property>
+        <name>report-processing-path</name>
+        <value>${environment}/cdr/reports/euro_leagues/gpdb_staging/</value>
+        <description>REPORT PROCESSING PATH</description>
+    </property>
+    
+    <property>
+        <name>report-gpdb-input</name>
+        <value>${environment}/cdr/reports/euro_leagues/gpdb_input/</value>
+        <description>GPDB INPUT PATH</description>
+    </property>
+    
+  	<property>
+		<name>default-processing-date</name>
+		<value>-2</value>
+		<description>Data de processamento da ingestao sem passagem de Parametros. Padrao: SYSDATE -2 (D-2)</description>
+	</property>
+	
+	<!-- FOR COMBINE INPUT -->
+    <property>
+		<name>mapreduce.job.max.split.locations</name>
+		<value>150</value>
+		<description></description>
+	</property>
+	<property>
+		<name>mapreduce.input.fileinputformat.split.maxsize</name>
+		<value>1073741824</value>
+		<description></description>
+	</property>
+	
+	<property>
+		<name>mapreduce.job.reduce.slowstart.completedmaps</name>
+		<value>0.9</value>
+	</property>
+	
+</configuration>

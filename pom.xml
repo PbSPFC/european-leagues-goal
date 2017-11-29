@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+		<groupId>br.com.tim</groupId>
+		<artifactId>tim-intn-mavn-hadoop-dependencies</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>euro-leagues</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>EUROPEAN LEAGUES GOALS</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+        <dependency>
+            <groupId>br.com.tim</groupId>
+            <artifactId>tim-intn-lib-commons</artifactId>
+            <version>1.0.17</version>
+            <scope>compile</scope>
+        </dependency> 
+		<dependency>
+            <groupId>br.com.tim</groupId>
+            <artifactId>tim-rede-inge-cdr-sms</artifactId>
+            <version>1.1.20</version>
+            <scope>compile</scope>
+        </dependency>
+        
+   		<dependency>
+			<groupId>br.com.tim</groupId>
+			<artifactId>tim-intn-lib-gpdb</artifactId>
+			<version>3.2.5</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.tim</groupId>
+			<artifactId>tim-intn-lib-mapreduce</artifactId>
+			<version>1.0.31</version>
+			<scope>compile</scope>
+		</dependency> 
+		
+	</dependencies>
+</project>
